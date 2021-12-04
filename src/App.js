@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import List from "./components/List";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//TODO FIGURE OUT WHY I HAVE TO HAVE data.data AND item.item
+//TODO CLEAN UP UNUSED FILES AND FOLDERS
+
+const App = () => {
+  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  const getData = async (type, page = 1) => {
+    try {
+      const res = await fetch(`https://swapi.dev/api/${type}/?page=${page}`, {
+        method: "GET",
+      });
+      const data = await res.json();
+      setData(data);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  useEffect(() => {
+    getData("people", 1);
+  }, []);
+
+  return <div className="App">{!isLoading && <List data={data} />}</div>;
+};
 
 export default App;

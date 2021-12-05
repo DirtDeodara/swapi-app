@@ -1,13 +1,14 @@
+import "./ListItem.css";
+
 const ListItem = (item) => {
-  console.log(item);
   return (
-    <div id={item.item.name}>
-      <div>{item.item.name}</div>
-      <div>{item.item.gender}</div>
-      <div>{item.item.hair_color}</div>
-      <div>{item.item.mass}</div>
-      <div>{item.item.height}</div>
-    </div>
+    <li className="itemContainer">
+      <p>Name: {item.item.name}</p>
+      <p>Gender: {item.item.gender}</p>
+      <p>Hair color: {item.item.hair_color}</p>
+      <p>Height: {item.item.height}</p>
+      <p>Mass: {item.item.mass}</p>
+    </li>
   );
 };
 

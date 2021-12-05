@@ -1,0 +1,11 @@
+.listContainer {
+  height: 800px;
+}
+
+.list {
+  margin: 30px auto;
+  padding-top: 50px;
+  width: 40%; 
+  display: flex;
+  flex-wrap: wrap;
+}

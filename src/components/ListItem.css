@@ -1,0 +1,7 @@
+.itemContainer {
+  border: 2px solid black;
+  width: 300px;
+  margin: 5px 10px 20px;
+  list-style-type: none;
+  text-align: center;
+}

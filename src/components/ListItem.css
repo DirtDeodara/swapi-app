@@ -5,3 +5,8 @@
   list-style-type: none;
   text-align: center;
 }
+
+.name {
+  font-size: 25px;
+  font-weight: 600;
+}

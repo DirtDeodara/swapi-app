@@ -62,8 +62,8 @@ const App = () => {
     getData(query);
   };
 
-  const handleTextChange = (event) => {
-    setQuery(event.target.value);
+  const handleTextChange = (e) => {
+    setQuery(e.target.value);
   };
 
   const incrementPagenNum = () => {

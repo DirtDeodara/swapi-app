@@ -112,6 +112,7 @@ const App = () => {
               next page
             </button>
           </div>
+          <div className="pageNumber">{page}</div>
           <List data={data} />
           <div className="averages">
             <div>Average weight: {avgHeight}</div>

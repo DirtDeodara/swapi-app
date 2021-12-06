@@ -41,6 +41,12 @@
   margin: 5px;
 }
 
+.pageNumber {
+  background-color: white;
+  padding: 5px;
+  margin-top: 5px;
+}
+
 .averages {
   background-color: white;
   padding: 15px;

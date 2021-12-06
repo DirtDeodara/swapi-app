@@ -41,7 +41,7 @@ const App = () => {
         }
       });
     } catch {
-      console.log("It's a trap!");
+      console.error("It's a trap!");
     } finally {
       if (heightArray.length > 0) {
         setAvgHeight(heightArray.reduce(reducer) / heightArray.length);

@@ -1,16 +1,14 @@
 import "./List.css";
 import ListItem from "./ListItem";
 
-const List = (data) => {
-  const list = data.data.results.map((item, i) => {
-    return <ListItem id={i}  item={item} />;
+const sortAlphabetically = (a, b) => a.name.localeCompare(b.name);
+
+const List = ({ data }) => {
+  const list = data.results.sort(sortAlphabetically).map((item, i) => {
+    return <ListItem key={i} item={item} />;
   });
 
-  return (
-    <div className="listContainer">
-      <ul className="list">{list}</ul>
-    </div>
-  );
+  return <ul className="list">{list}</ul>;
 };
 
 export default List;

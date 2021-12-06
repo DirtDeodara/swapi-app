@@ -17,9 +17,6 @@ const App = () => {
   const [avgMass, setAvgMass] = useState();
 
   const getData = async (query = page) => {
-    setHeightArray([]);
-    setMassArray([]);
-
     const param = typeof query === "string" ? "search" : "page";
 
     try {
@@ -55,7 +52,7 @@ const App = () => {
 
   useEffect(() => {
     getData();
-  }, [page]);
+  }, [page, avgMass, avgHeight]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

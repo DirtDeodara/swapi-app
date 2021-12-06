@@ -37,9 +37,17 @@
   border: none;
   border-radius: 20px;
 }
+.searchBtn:hover {
+  background: #ff9238;
+}
 
 .pagination {
   margin: 5px;
+  background: #ffd538;
+}
+
+.pagination:hover:enabled {
+  background: #ff9238;
 }
 
 .pageNumber {
